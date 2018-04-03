@@ -8,7 +8,7 @@
 
 ### Team Members
  
- * Олексій Атаманюк - Product Owner
+ * Олексій Атаманюк - Project Owner
  * Віталій Кривенко - Scrum Master
  * Даниїл  Песчанський - TeamLead
  * Віталій Качанов - Lead QA
