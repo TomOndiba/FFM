@@ -4,7 +4,8 @@
 
 <img align="right" src="https://github.com/FireAndBlood12/prog/blob/master/IMG_2844.PNG">
 
-# _Тут Вітаха красиво напише опис проекту і який він крутий_ 
+# _Facking fire machine is a dangerous assassinator made by GIY team for group dynamics classes. This craft is driven by (madness) android smartphone application, which requires bluetooth connection. It provides remote driving and firing controll. It can be used by the USA army or elsewhere to murder people, smoke cigarettes, cook or just have fun with friends. It has a rechargable accumulator and refillable fire dispenser._
+# _Ahtung! No children or pregnant subjects are allowed to be located 200 meters around FFM._ 
 
 ### Team Members
  
