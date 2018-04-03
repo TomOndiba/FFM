@@ -2,7 +2,9 @@
 ## _Exciting fire mashine by G.I.Y team_
 
 
-<img align="right" src="https://github.com/FireAndBlood12/prog/blob/master/IMG_2844.PNG"?size=20>
+<img align="right" src="https://github.com/FireAndBlood12/prog/blob/master/IMG_2844.PNG">
+
+![Logo image](https://github.com/FireAndBlood12/prog/blob/master/IMG_2844.PNG?size=20)
 
 
 [docs](https://docs.google.com/spreadsheets/d/1HHw5KDrVk0AnSIGJreH4jOdfpb7VtTAZhVpm-1HU2tU/edit#gid=0)\
