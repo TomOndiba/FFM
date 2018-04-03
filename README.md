@@ -23,7 +23,7 @@
 
 ## First sprint
 1. [docs](https://docs.google.com/spreadsheets/d/1HHw5KDrVk0AnSIGJreH4jOdfpb7VtTAZhVpm-1HU2tU/edit#gid=0)
-1. [meeting results](https://docs.google.com/document/d/1aGb1IYfKZ627R_a4WIMSae-ZWUQ8NoL-mD4qlwgQoQ4/edit)
+1. [Meeting results](https://docs.google.com/document/d/1aGb1IYfKZ627R_a4WIMSae-ZWUQ8NoL-mD4qlwgQoQ4/edit)
 2. [Burndown chart](https://docs.google.com/spreadsheets/d/1AHfeBAYtMuiKIl9go-UKPJXa0bIa4qfdzB3qVkTlnWc/edit?usp=sharing)
 3. [Demonstration](https://docs.google.com/presentation/d/1P59UH1bn7VWtPSnJD2ycK9QTWsynzHFF-v7N4FJcUHY/edit?usp=sharing)
 4. [Retrospective](https://docs.google.com/spreadsheets/d/1-wMHiNpxTyazeuUBJY6sjtFUaTjWSGKvCouLZwBrpuo/edit?usp=sharing)
