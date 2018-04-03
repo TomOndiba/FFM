@@ -1,5 +1,5 @@
-# G.I.Y
-## _Facking fire machine by by G.I.Y team_
+# GIY
+## _Facking fire machine by GIY team_
 
 
 <img align="right" src="https://github.com/FireAndBlood12/prog/blob/master/IMG_2844.PNG">
