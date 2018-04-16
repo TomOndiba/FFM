@@ -29,3 +29,4 @@
 4. [Retrospective](https://docs.google.com/spreadsheets/d/1-wMHiNpxTyazeuUBJY6sjtFUaTjWSGKvCouLZwBrpuo/edit?usp=sharing)
 ## Second sprint
 1. [docs](https://docs.google.com/spreadsheets/d/1HHw5KDrVk0AnSIGJreH4jOdfpb7VtTAZhVpm-1HU2tU/edit#gid=0)
+2. [Meeting results_2](https://docs.google.com/document/d/1xvqzVWKK_oI9fB8WkdZ0YjJwwyxLWVSJzXTbQxAW1tw/edit?usp=sharing)
