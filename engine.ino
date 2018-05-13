@@ -1,28 +1,5 @@
 #include "defs.h"
 
-static unsigned char & increase(unsigned char & val, const unsigned char & step){
-    if ((short)val + (short) step <= 255){
-      val += step;
-    } else {
-      val = 255;
-    }
-    return val;
-}
-
-static unsigned char & decrease(unsigned char & val, const unsigned char & step){
-  if ((short)val - (short)step >= 0){
-    val -= step;
-  } else {
-    val = 0;
-  }
-  return val;
-}
-
-Driver::Driver(const char &key, const Executor &response)
-      : key(key), respond(response) {}
-      
-//--------------------------------------------------
-
 Engine::Engine(const char & key, const Executor &response)
 		: Driver(key, response) {}
 
@@ -73,14 +50,14 @@ void Engine::speedUp(){   Engine::speedUp  (SPEED_STEP); }
 
 
 void Engine::speedDown(const unsigned char & step){
-	analogWrite(pin_velocityLeft,  decrease(speedLeft,  step));
-  analogWrite(pin_velocityRight, decrease(speedRight, step));
+	setLeftSpeed(decrease(speedLeft,  step));
+  setRightSpeed(decrease(speedRight, step));
 }
 
 void Engine::speedUp(const unsigned char & step){
   bool wasIdle { isIdle() };
-	analogWrite(pin_velocityLeft,  increase(speedLeft,  step));
-  analogWrite(pin_velocityRight, increase(speedRight, step));
+	setLeftSpeed(increase(speedLeft,  step));
+  setRightSpeed(increase(speedRight, step));
   if (wasIdle){
     switch (thrust){
       case Forward:{  driveForward();   return;}
@@ -157,7 +134,8 @@ void Engine::alignWheels(){
 }
 
 void Engine::shutdown(){
-  speedLeft = speedRight = 0;
+  setLeftSpeed(0);
+  setRightSpeed(0);
 	digitalWrite(pin_engineBackLeft,  LOW);
 	digitalWrite(pin_engineForwLeft,  LOW);
 
@@ -213,60 +191,5 @@ bool Engine::wheelsAreAligned(){
   return speedLeft == speedRight;
 }
 
-Servo Servak::serv;
-bool Servak::pushed = false;
 
-void Servak::init(const pin_t & pin){
-  serv.attach(pin);
-}
-
-void Servak::push(){
-  if (pushed){
-    serv.write(0);
-    pushed = false;
-  } else {
-    serv.write(SERV_ANGLE);
-    pushed = true; 
-    delay(100);
-    Shocker::strike();
-  }
-}
-
-pin_t Shocker::pin = 0;
-
-void Shocker::init(const pin_t & pin){
-  pinMode(pin, OUTPUT);
-  Shocker::pin = pin;
-}
-
-void Shocker::strike(){
-  digitalWrite(pin, HIGH);
-  delay(200);
-  digitalWrite(pin, LOW);
-}
-
-
-// ----------------------------------------
-// BLUETOOTH
-
-Bluetooth::Bluetooth(const pin_t & RX, const pin_t & TX, const pin_t & STATE, const int & baudrate)
-  : serialPort(RX, TX), pin_state(STATE) 
-{
-  serialPort.begin(baudrate);
-  pinMode(pin_state, INPUT);
-}
-
-  bool Bluetooth::isConnected() const{
-    return digitalRead(pin_state);
-  }
-
-  int Bluetooth::dataAvailable() {
-    return serialPort.available();
-  }
-
-  char Bluetooth::readChar(){
-    return serialPort.read();
-  }
-  
-  
 

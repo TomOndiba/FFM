@@ -1,10 +1,15 @@
 #include <SoftwareSerial.h>
-#include "defs.h"
 #include <Ultrasonic.h>
 #include <Wire.h> 
+#include "defs.h"
+#include "bluetooth.h"
+#include "debug.h"
+#include "engine.h"
+#include "shocker.h"
+#include "servak.h"
 
 #define DELAY_MS      200
-#define CRITICAL_OBSTACLE_DISTANCE 10 /* centimeters */
+#define CRITICAL_OBSTACLE_DISTANCE 40 /* centimeters */
 
 Driver actions[] = {
     {'T', Engine::shutdown},
@@ -14,30 +19,30 @@ Driver actions[] = {
     {'D', Engine::speedDown},
     {'L', Engine::turnLeft},
     {'R', Engine::turnRight},
-    {'P', Servak::push},
+    {'P', Servak::pushFire},
     {'S', Shocker::strike}
 };
 
 bool react(const char &command){
-	for (unsigned char i = 0; i < sizeat(actions); ++i){
-		if (actions[i].key == command){
-			actions[i].respond();
+	for (const Driver & action: actions){
+		if (action.key == command){
+			action.respond();
 			return true;
 		}
 	}
 	return false;
 }
 
-static Ultrasonic rangefinder(4, 3);
-static Bluetooth blt(0, 1, 2); // RX, TX, STATE
+static Ultrasonic rangefinder(4, 3); // trig, echo
+static Bluetooth       blt(0, 1, 2); // RX, TX, STATE
 
 void setup(){
   Debug::init();
   
   Engine::init(11, 12, 13,   // enA, in1, in2
-               6,  8, 7);  // enB, in3, in4
-  Servak::init(10);
-  Shocker::init(5);
+                6,  8,  7);  // enB, in3, in4
+  Servak::init(10);          // yellow wire
+  Shocker::init(5);         
 }
 
 void processObstacleAvoiding(){
@@ -49,7 +54,7 @@ void processObstacleAvoiding(){
   }
 }
 
-void loop(){
+void loop(){  
   delay(DELAY_MS);
     
   if (!blt.isConnected()){
@@ -58,11 +63,18 @@ void loop(){
   }
   if (blt.dataAvailable()){
     char ch = blt.readChar();
+    blt.discardAllPendingData(); /* UNTESTED LINE */
     switch (ch) {
       case 'L':
       case 'R': break;
+      case '+':{
+        blt.discardAllPendingData(); /* received unnecessary bluetooth AT command */
+        Engine::smoothSteering();
+        return;
+      }
       default: { Engine::smoothSteering(); }
     }
+    Debug::log("Available: ", ch, ' ');
     react(ch);
   } else {
     Engine::smoothSteering();
@@ -72,6 +84,7 @@ void loop(){
   Debug::log("' SPEED LEFT: ", Engine::speedLeft, " SPEED RIGHT: ", Engine::speedRight);
   Debug::logln(" Current Thrust: ", Engine::thrust == Engine::Forward ? "forward" : Engine::thrust == Engine::Backward ? "backward" : "idle"); 
 }
+
 
 
 
