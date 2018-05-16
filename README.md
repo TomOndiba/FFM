@@ -31,3 +31,4 @@
 1. [Meeting results_2](https://docs.google.com/document/d/1xvqzVWKK_oI9fB8WkdZ0YjJwwyxLWVSJzXTbQxAW1tw/edit?usp=sharing)
 2. [Burndown chart](https://docs.google.com/spreadsheets/d/1AHfeBAYtMuiKIl9go-UKPJXa0bIa4qfdzB3qVkTlnWc/edit#gid=1319640914)
 3. [docs](https://docs.google.com/spreadsheets/d/1HHw5KDrVk0AnSIGJreH4jOdfpb7VtTAZhVpm-1HU2tU/edit#gid=0)
+4. [DOCS manual](https://github.com/progbase/FFM/blob/master/DOCS.md)
