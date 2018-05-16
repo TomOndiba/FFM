@@ -3,7 +3,10 @@
 © Copyright: GIY team since March 2018
 
 ## Mechatronics HOWTO
-
+<details>
+    <summary>Detailed FFM circuit overview.</summary>
+<img src = "circuit.png">
+</details>
 ### Engines
 1. Plug left and right engines power supply wires into     H-bridge OUT sockets separately and fix them with a         screwdriver.
 2. Bind H-bridge input sockets to Arduino Uno pins:
