@@ -65,15 +65,15 @@ to access it.
 </details>
 
 ## Driving HOWTO
-Consider following key bindings:
- * `Cross`: increase engines' throttle
- * `Triangle`: decrease engines' throttle
- * `Square`: shutdown engines immediately
- * `Arrows`: change movement direction (auto auto-leveling of the steering wheel is provided)
- * `Start`: shocker strike
- * `Circle`: dispense fire
+Consider the following key bindings (signal -> controll button):
+ * `'I' -> Cross`: **I**ncrease engines' throttle
+ * `'D' -> Triangle`: **D**ecrease engines' throttle
+ * `'T' -> Square`: **T**erminate (shutdown) engines immediately
+ * `'L', 'R', 'F', 'B' -> Arrows`: change movement direction to **L**eft, **R**ight, **F**orwards, **B**ackwards (auto-leveling of the steering wheel is provided)
+ * `'S' -> Start`: **S**hocker strike
+ * `'P' -> Circle`: dis**p**ense fire
  
-You may contribute to the project by writing your own desktop or mobile application devoted to controlling Facking Fire Machine. You are provided with a simple API in form of a set of signals which you may send to the machine via bluetooth connection. All valid signals (which are represented by a single character) are mentioned at the screenshot of Arduino Bluetooth Controller setup menu above.
+You may contribute to the project by writing your own desktop or mobile application devoted to controlling Facking Fire Machine. You are provided with a simple API in form of a set of signals which you may send to the machine via bluetooth connection. All valid signals, which are represented by a single character, are listed above.
 
 When driving backwards, FFM stops if rangefinder detects an obstacle in range of 40 centimeters to the machine's rear. Also,
 beware that FFM shutdowns when it loses bluetooth connection.
