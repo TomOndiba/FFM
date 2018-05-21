@@ -4,7 +4,7 @@
 
 ## Mechatronics HOWTO
 <details>
-    <summary>Detailed FFM circuit overview.</summary>
+    <summary>Detailed FFM circuit overview (clickable).</summary>
 <img src = "circuit.png">
 </details>
 
@@ -50,17 +50,17 @@ of H-bridge and bind its MINUS with Arduino's GND.
 * [*Download Arduino IDE for Ubuntu*](https://www.arduino.cc/en/Guide/Linux)
 * [*Download the code from github.*](https://github.com/progbase/FFM)
 * Plug blue Arduino USB cable into one of your PC's sockets.
-* Be shure to unplug HC-06 bluetooth module from the circuit before uploading new sketch to Arduino Uno, **otherwise uploading failure has to occur**.
+* Be sure to unplug HC-06 bluetooth module from the circuit before uploading new sketch to Arduino Uno, **otherwise uploading failure has to occur**.
 * Push 'Upload' button (second button with an arrow inside).
-* Stay await until 'Done uploading' message has appeared, only  then you may plug HC-06 module back to the circuit.
+* Stay await until 'Done uploading' message has appeared, only then you may plug in HC-06 module back to the circuit.
 ### Android App
 * [Download Arduino bluetooth controller](https://play.google.com/store/apps/details?id=com.giumig.apps.bluetoothserialmonitor&hl=ru) or other bluetooth interactive application.
 * Open the app and look for `'HC-06'` device in available bluetooth devices list.
 * Pair your smartphone with HC-06 module, use `1234` password
 to access it.
-* Connect to HC-06 in `'Controler mode'`(it's red LED stop's rapid shimmering when connection was established).
+* Connect to HC-06 in `'Controler mode'`(it's red LED stop's rapid shimmering when connection has been established).
 <details>
-    <summary>Open the setup menu and input the following settings.</summary>
+    <summary>Open the setup menu and input the following settings (clickable).</summary>
 <img src = "settings.png">
 </details>
 
@@ -72,6 +72,8 @@ Consider following key bindings:
  * `Arrows`: change movement direction (auto auto-leveling of the steering wheel is provided)
  * `Start`: shocker strike
  * `Circle`: dispense fire
+ 
+You may contribute to the project by writing your own desktop or mobile application devoted to controlling Facking Fire Machine. You are provided with a simple API in form of a set of signals which you may send to the machine via bluetooth connection. All valid signals (which are represented by a single character) are mentioned at the screenshot of Arduino Bluetooth Controller setup menu above.
 
 When driving backwards, FFM stops if rangefinder detects an obstacle in range of 40 centimeters to the machine's rear. Also,
 beware that FFM shutdowns when it loses bluetooth connection.
