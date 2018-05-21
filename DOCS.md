@@ -8,6 +8,20 @@
 <img src = "circuit.png">
 </details>
 
+### Reqired hardware
+1. Arduino Uno (RA)
+2. [Ececlrow's robot platform (4 engines, 4 wheels and a body)](https://arduino.ua/prod1494--kolesnaya-polnoprivodnaya-roboplatforma)
+3. [L298N H-bridge motor controller](https://arduino.ua/prod406-Draiver_dvyh_dvigatelei_na_L298N)
+4. [Servo driver SG90](https://arduino.ua/prod416-Servo_SG90_2kg)
+5. [Ultrasonic rangefinder HC-SR04](https://www.sparkfun.com/products/13959) 
+6. [Chinese 5V to 400kV converter](https://bigl.ua/p328894812-generator-vysokogo-napryazheniya?click_track_data=.eJwdjU0LgjAAQP_Lzh6mzjG9WSYejEJNqQhZc5hkbvnR1Oi_Zx3f48F7g04MLePAAdeqrIEGenHnzYJR6scpmpJjeMDzpCCkHhql5M0WVyHGoR0o_opvQazwKXUTiiO_Y51ZjOU6mhWRq523wWuV11m2fzY5taygdoVYDoz2vBTtlFdFB5yzBSGGxkUDshXFwPpFA8c0CLER0Y1f_pC0Kpu_RxCauvn5AqbHOuY.U65jKD54H3x82VqLb2QSsyuOM1c)
+7. [MOSFET (N chanel)](https://prom.ua/p411956229-tranzistor-irf840apbf-mosfet.html)
+8. Resistor 10kOm
+9. [HC-06 bluetooth module](https://arduino.ua/prod241-Bluetooth_modyl)
+10. 4 different power supply modules: 5V -> Arduino Uno, 5V -> high voltage converter, 3-5V -> Servo Driver, 12-18V -> motors
+11. Father-father and mother-father wires
+12. Isolenta
+
 ### Engines
 1. Plug left and right engines power supply wires into     H-bridge OUT sockets separately and fix them with a         screwdriver.
 2. Bind H-bridge input sockets to Arduino Uno pins:
