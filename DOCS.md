@@ -5,7 +5,7 @@
 ## Mechatronics HOWTO
 <details>
     <summary>Detailed FFM circuit overview (clickable).</summary>
-<img src = "circuit.png">
+<img src = "/images/circuit.png">
 </details>
 
 ### Reqired hardware
@@ -75,7 +75,7 @@ to access it.
 * Connect to HC-06 in `'Controler mode'`(it's red LED stop's rapid shimmering when connection has been established).
 <details>
     <summary>Open the setup menu and input the following settings (clickable).</summary>
-<img src = "settings.png">
+<img src = "/images/settings.png">
 </details>
 
 ## Driving HOWTO
